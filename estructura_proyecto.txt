@@ -1,0 +1,105 @@
+/tu-proyecto
+│
+├── /src
+│   ├── /app
+│   │   ├── /core               # Módulo Core para servicios y guardias compartidos
+│   │   │   ├── core.module.ts
+│   │   │   ├── auth.guard.ts   # Ejemplo de guardia de autenticación
+│   │   │   ├── logger.service.ts
+│   │   │   └── http-interceptor.service.ts
+│   │   │
+│   │   ├── /shared             # Módulo Shared para componentes, pipes, y directivas compartidas
+│   │   │   ├── shared.module.ts
+│   │   │   ├── /components     # Componentes reutilizables (tablas, modales, etc.)
+│   │   │   │   ├── table
+│   │   │   │   │   ├── table.component.ts
+│   │   │   │   │   ├── table.component.html
+│   │   │   │   │   └── table.component.scss
+│   │   │   │   ├── modal
+│   │   │   │   │   ├── modal.component.ts
+│   │   │   │   │   ├── modal.component.html
+│   │   │   │   │   └── modal.component.scss
+│   │   │   │   └── ...
+│   │   │   ├── /pipes          # Pipes compartidas
+│   │   │   ├── /directives     # Directivas compartidas
+│   │   │   └── /models         # Interfaces y modelos
+│   │   │       ├── user.model.ts
+│   │   │       ├── payment.model.ts
+│   │   │       └── ...
+│   │   │
+│   │   ├── /modules            # Módulos por cada funcionalidad/vista
+│   │   │   ├── /usuarios
+│   │   │   │   ├── usuarios.module.ts
+│   │   │   │   ├── usuarios.component.ts
+│   │   │   │   ├── usuarios.component.html
+│   │   │   │   ├── usuarios.component.scss
+│   │   │   │   └── /components
+│   │   │   │       └── ...     # Componentes específicos de Usuarios
+│   │   │   ├── /pagos
+│   │   │   │   ├── pagos.module.ts
+│   │   │   │   ├── pagos.component.ts
+│   │   │   │   ├── pagos.component.html
+│   │   │   │   ├── pagos.component.scss
+│   │   │   │   └── /components
+│   │   │   │       └── ...     # Componentes específicos de Pagos
+│   │   │   ├── /pedidos
+│   │   │   ├── /bodegas
+│   │   │   ├── /proveedores
+│   │   │   └── /proprovedores
+│   │   │
+│   │   ├── /layout             # Plantilla y layout usando CoreUI
+│   │   │   ├── header.component.ts
+│   │   │   ├── sidebar.component.ts
+│   │   │   ├── footer.component.ts
+│   │   │   ├── layout.component.ts
+│   │   │   ├── layout.component.html
+│   │   │   └── layout.component.scss
+│   │   │
+│   │   ├── app-routing.module.ts
+│   │   ├── app.component.ts
+│   │   ├── app.component.html
+│   │   └── app.module.ts
+│   │
+│   ├── /assets                 # Archivos estáticos como imágenes, fuentes, etc.
+│   ├── /environments           # Archivos de configuración de entornos (dev, prod)
+│   └── main.ts
+│
+├── angular.json                # Configuración de Angular CLI
+├── package.json
+└── tsconfig.json
+
+----------------------------------------------------------------------------------------------------
+/tu-proyecto-backend
+│
+├── /src
+│   ├── /app.module.ts          # Módulo raíz de la aplicación
+│   ├── /core                   # Módulo Core para lógica compartida
+│   │   ├── core.module.ts
+│   │   └── database.module.ts  # Módulo de conexión a la base de datos
+│   │   └── database.service.ts # Servicio de base de datos
+│   │
+│   ├── /shared                 # Módulo Shared para lógica reutilizable
+│   │   ├── shared.module.ts
+│   │   └── interfaces          # Interfaces y modelos compartidos
+│   │
+│   ├── /modules                # Módulos de características (por cada funcionalidad)
+│   │   ├── /usuarios
+│   │   │   ├── usuarios.module.ts
+│   │   │   ├── usuarios.service.ts
+│   │   │   └── usuarios.controller.ts
+│   │   ├── /pagos
+│   │   ├── /pedidos
+│   │   ├── /bodegas
+│   │   ├── /proveedores
+│   │   └── /proprovedores
+│   │
+│   ├── /config                 # Configuración de entornos
+│   │   ├── configuration.ts
+│   │   └── constants.ts
+│   │
+│   └── main.ts                 # Punto de entrada de la aplicación NestJS
+│
+├── nest-cli.json               # Configuración de NestJS CLI
+├── package.json
+└── tsconfig.json
+
